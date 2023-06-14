@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */; };
+		867411772A3A120E006DFCA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411762A3A120E006DFCA8 /* ContentView.swift */; };
+		867411792A3A120F006DFCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867411782A3A120F006DFCA8 /* Assets.xcassets */; };
+		8674117C2A3A120F006DFCA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8674117B2A3A120F006DFCA8 /* Preview Assets.xcassets */; };
+		867411872A3A120F006DFCA8 /* iVirtualCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411862A3A120F006DFCA8 /* iVirtualCamTests.swift */; };
+		867411912A3A120F006DFCA8 /* iVirtualCamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411902A3A120F006DFCA8 /* iVirtualCamUITests.swift */; };
+		867411932A3A120F006DFCA8 /* iVirtualCamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411922A3A120F006DFCA8 /* iVirtualCamUITestsLaunchTests.swift */; };
+		867411A62A3A1241006DFCA8 /* CameraExtensionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411A52A3A1241006DFCA8 /* CameraExtensionProvider.swift */; };
+		867411A82A3A1241006DFCA8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411A72A3A1241006DFCA8 /* main.swift */; };
+		867411AD2A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		867411832A3A120F006DFCA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867411692A3A120E006DFCA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867411702A3A120E006DFCA8;
+			remoteInfo = iVirtualCam;
+		};
+		8674118D2A3A120F006DFCA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867411692A3A120E006DFCA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867411702A3A120E006DFCA8;
+			remoteInfo = iVirtualCam;
+		};
+		867411AB2A3A1241006DFCA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867411692A3A120E006DFCA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867411A22A3A1241006DFCA8;
+			remoteInfo = CameraExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		867411B12A3A1241006DFCA8 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				867411AD2A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		867411712A3A120E006DFCA8 /* iVirtualCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVirtualCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVirtualCamApp.swift; sourceTree = "<group>"; };
+		867411762A3A120E006DFCA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		867411782A3A120F006DFCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8674117B2A3A120F006DFCA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8674117D2A3A120F006DFCA8 /* iVirtualCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iVirtualCam.entitlements; sourceTree = "<group>"; };
+		867411822A3A120F006DFCA8 /* iVirtualCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVirtualCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		867411862A3A120F006DFCA8 /* iVirtualCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVirtualCamTests.swift; sourceTree = "<group>"; };
+		8674118C2A3A120F006DFCA8 /* iVirtualCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVirtualCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		867411902A3A120F006DFCA8 /* iVirtualCamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVirtualCamUITests.swift; sourceTree = "<group>"; };
+		867411922A3A120F006DFCA8 /* iVirtualCamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVirtualCamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.infernno.iVirtualCam.CameraExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		867411A52A3A1241006DFCA8 /* CameraExtensionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionProvider.swift; sourceTree = "<group>"; };
+		867411A72A3A1241006DFCA8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		867411A92A3A1241006DFCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867411AA2A3A1241006DFCA8 /* CameraExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8674116E2A3A120E006DFCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8674117F2A3A120F006DFCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867411892A3A120F006DFCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867411A02A3A1241006DFCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		867411682A3A120E006DFCA8 = {
+			isa = PBXGroup;
+			children = (
+				867411732A3A120E006DFCA8 /* iVirtualCam */,
+				867411852A3A120F006DFCA8 /* iVirtualCamTests */,
+				8674118F2A3A120F006DFCA8 /* iVirtualCamUITests */,
+				867411A42A3A1241006DFCA8 /* CameraExtension */,
+				867411722A3A120E006DFCA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		867411722A3A120E006DFCA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				867411712A3A120E006DFCA8 /* iVirtualCam.app */,
+				867411822A3A120F006DFCA8 /* iVirtualCamTests.xctest */,
+				8674118C2A3A120F006DFCA8 /* iVirtualCamUITests.xctest */,
+				867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		867411732A3A120E006DFCA8 /* iVirtualCam */ = {
+			isa = PBXGroup;
+			children = (
+				867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */,
+				867411762A3A120E006DFCA8 /* ContentView.swift */,
+				867411782A3A120F006DFCA8 /* Assets.xcassets */,
+				8674117D2A3A120F006DFCA8 /* iVirtualCam.entitlements */,
+				8674117A2A3A120F006DFCA8 /* Preview Content */,
+			);
+			path = iVirtualCam;
+			sourceTree = "<group>";
+		};
+		8674117A2A3A120F006DFCA8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8674117B2A3A120F006DFCA8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		867411852A3A120F006DFCA8 /* iVirtualCamTests */ = {
+			isa = PBXGroup;
+			children = (
+				867411862A3A120F006DFCA8 /* iVirtualCamTests.swift */,
+			);
+			path = iVirtualCamTests;
+			sourceTree = "<group>";
+		};
+		8674118F2A3A120F006DFCA8 /* iVirtualCamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				867411902A3A120F006DFCA8 /* iVirtualCamUITests.swift */,
+				867411922A3A120F006DFCA8 /* iVirtualCamUITestsLaunchTests.swift */,
+			);
+			path = iVirtualCamUITests;
+			sourceTree = "<group>";
+		};
+		867411A42A3A1241006DFCA8 /* CameraExtension */ = {
+			isa = PBXGroup;
+			children = (
+				867411A52A3A1241006DFCA8 /* CameraExtensionProvider.swift */,
+				867411A72A3A1241006DFCA8 /* main.swift */,
+				867411A92A3A1241006DFCA8 /* Info.plist */,
+				867411AA2A3A1241006DFCA8 /* CameraExtension.entitlements */,
+			);
+			path = CameraExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		867411702A3A120E006DFCA8 /* iVirtualCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867411962A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCam" */;
+			buildPhases = (
+				8674116D2A3A120E006DFCA8 /* Sources */,
+				8674116E2A3A120E006DFCA8 /* Frameworks */,
+				8674116F2A3A120E006DFCA8 /* Resources */,
+				867411B12A3A1241006DFCA8 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				867411AC2A3A1241006DFCA8 /* PBXTargetDependency */,
+			);
+			name = iVirtualCam;
+			productName = iVirtualCam;
+			productReference = 867411712A3A120E006DFCA8 /* iVirtualCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		867411812A3A120F006DFCA8 /* iVirtualCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867411992A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCamTests" */;
+			buildPhases = (
+				8674117E2A3A120F006DFCA8 /* Sources */,
+				8674117F2A3A120F006DFCA8 /* Frameworks */,
+				867411802A3A120F006DFCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				867411842A3A120F006DFCA8 /* PBXTargetDependency */,
+			);
+			name = iVirtualCamTests;
+			productName = iVirtualCamTests;
+			productReference = 867411822A3A120F006DFCA8 /* iVirtualCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8674118B2A3A120F006DFCA8 /* iVirtualCamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8674119C2A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCamUITests" */;
+			buildPhases = (
+				867411882A3A120F006DFCA8 /* Sources */,
+				867411892A3A120F006DFCA8 /* Frameworks */,
+				8674118A2A3A120F006DFCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8674118E2A3A120F006DFCA8 /* PBXTargetDependency */,
+			);
+			name = iVirtualCamUITests;
+			productName = iVirtualCamUITests;
+			productReference = 8674118C2A3A120F006DFCA8 /* iVirtualCamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		867411A22A3A1241006DFCA8 /* CameraExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867411AE2A3A1241006DFCA8 /* Build configuration list for PBXNativeTarget "CameraExtension" */;
+			buildPhases = (
+				8674119F2A3A1241006DFCA8 /* Sources */,
+				867411A02A3A1241006DFCA8 /* Frameworks */,
+				867411A12A3A1241006DFCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CameraExtension;
+			productName = CameraExtension;
+			productReference = 867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		867411692A3A120E006DFCA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					867411702A3A120E006DFCA8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					867411812A3A120F006DFCA8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 867411702A3A120E006DFCA8;
+					};
+					8674118B2A3A120F006DFCA8 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 867411702A3A120E006DFCA8;
+					};
+					867411A22A3A1241006DFCA8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8674116C2A3A120E006DFCA8 /* Build configuration list for PBXProject "iVirtualCam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 867411682A3A120E006DFCA8;
+			productRefGroup = 867411722A3A120E006DFCA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				867411702A3A120E006DFCA8 /* iVirtualCam */,
+				867411812A3A120F006DFCA8 /* iVirtualCamTests */,
+				8674118B2A3A120F006DFCA8 /* iVirtualCamUITests */,
+				867411A22A3A1241006DFCA8 /* CameraExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8674116F2A3A120E006DFCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8674117C2A3A120F006DFCA8 /* Preview Assets.xcassets in Resources */,
+				867411792A3A120F006DFCA8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867411802A3A120F006DFCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8674118A2A3A120F006DFCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867411A12A3A1241006DFCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8674116D2A3A120E006DFCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867411772A3A120E006DFCA8 /* ContentView.swift in Sources */,
+				867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8674117E2A3A120F006DFCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867411872A3A120F006DFCA8 /* iVirtualCamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867411882A3A120F006DFCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867411932A3A120F006DFCA8 /* iVirtualCamUITestsLaunchTests.swift in Sources */,
+				867411912A3A120F006DFCA8 /* iVirtualCamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8674119F2A3A1241006DFCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867411A82A3A1241006DFCA8 /* main.swift in Sources */,
+				867411A62A3A1241006DFCA8 /* CameraExtensionProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		867411842A3A120F006DFCA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867411702A3A120E006DFCA8 /* iVirtualCam */;
+			targetProxy = 867411832A3A120F006DFCA8 /* PBXContainerItemProxy */;
+		};
+		8674118E2A3A120F006DFCA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867411702A3A120E006DFCA8 /* iVirtualCam */;
+			targetProxy = 8674118D2A3A120F006DFCA8 /* PBXContainerItemProxy */;
+		};
+		867411AC2A3A1241006DFCA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867411A22A3A1241006DFCA8 /* CameraExtension */;
+			targetProxy = 867411AB2A3A1241006DFCA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		867411942A3A120F006DFCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		867411952A3A120F006DFCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		867411972A3A120F006DFCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iVirtualCam/iVirtualCam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iVirtualCam/Preview Content\"";
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		867411982A3A120F006DFCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iVirtualCam/iVirtualCam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iVirtualCam/Preview Content\"";
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8674119A2A3A120F006DFCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iVirtualCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iVirtualCam";
+			};
+			name = Debug;
+		};
+		8674119B2A3A120F006DFCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iVirtualCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iVirtualCam";
+			};
+			name = Release;
+		};
+		8674119D2A3A120F006DFCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iVirtualCam;
+			};
+			name = Debug;
+		};
+		8674119E2A3A120F006DFCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iVirtualCam;
+			};
+			name = Release;
+		};
+		867411AF2A3A1241006DFCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CameraExtension/CameraExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCam.CameraExtension;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		867411B02A3A1241006DFCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CameraExtension/CameraExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MBQLD47ZQV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infernno.iVirtualCam.CameraExtension;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8674116C2A3A120E006DFCA8 /* Build configuration list for PBXProject "iVirtualCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867411942A3A120F006DFCA8 /* Debug */,
+				867411952A3A120F006DFCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867411962A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867411972A3A120F006DFCA8 /* Debug */,
+				867411982A3A120F006DFCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867411992A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8674119A2A3A120F006DFCA8 /* Debug */,
+				8674119B2A3A120F006DFCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8674119C2A3A120F006DFCA8 /* Build configuration list for PBXNativeTarget "iVirtualCamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8674119D2A3A120F006DFCA8 /* Debug */,
+				8674119E2A3A120F006DFCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867411AE2A3A1241006DFCA8 /* Build configuration list for PBXNativeTarget "CameraExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867411AF2A3A1241006DFCA8 /* Debug */,
+				867411B02A3A1241006DFCA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 867411692A3A120E006DFCA8 /* Project object */;
+}
