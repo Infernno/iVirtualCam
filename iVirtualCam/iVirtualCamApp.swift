@@ -11,7 +11,7 @@ import SwiftUI
 struct iVirtualCamApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(navigator: Navigator(destination: .start))
         }
     }
 }

@@ -5,7 +5,7 @@
 	<key>CMIOExtension</key>
 	<dict>
 		<key>CMIOExtensionMachServiceName</key>
-		<string>$(TeamIdentifierPrefix)$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		<string>$(TeamIdentifierPrefix)$(DEFAULT_APP_GROUP)</string>
 	</dict>
 	<key>NSSystemExtensionUsageDescription</key>
 	<string></string>

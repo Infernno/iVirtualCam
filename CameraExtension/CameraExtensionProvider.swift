@@ -9,6 +9,7 @@ import Foundation
 import CoreMediaIO
 import IOKit.audio
 import os.log
+import Shared
 
 let kWhiteStripeHeight: Int = 10
 let kFrameRate: Int = 60

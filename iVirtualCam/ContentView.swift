@@ -6,21 +6,30 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
+    
+    @StateObject var navigator: Navigator
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            let destination = navigator.destination
+            
+            switch(destination) {
+            case .start:
+                StartView()
+            case .main:
+                MainView()
+            }
         }
+        .environmentObject(navigator)
         .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(navigator: Navigator(destination: .start))
     }
 }
