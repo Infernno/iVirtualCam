@@ -10,7 +10,7 @@ import AVFoundation
 
 struct ContentView: View {
     
-    @StateObject var navigator: Navigator
+    @StateObject var navigator: Navigator = Navigator(destination: .main)
     
     var body: some View {
         VStack {
