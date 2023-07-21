@@ -8,5 +8,7 @@
 	<array>
 		<string>$(TeamIdentifierPrefix)$(DEFAULT_APP_GROUP)</string>
 	</array>
+	<key>com.apple.security.device.camera</key>
+	<true/>
 </dict>
 </plist>

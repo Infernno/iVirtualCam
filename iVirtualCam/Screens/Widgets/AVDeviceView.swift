@@ -2,21 +2,21 @@ import AppKit
 import AVFoundation
 import SwiftUI
 
-struct AVCameraView: View {
+struct AVDeviceView<Placeholder: View>: View {
     @Binding var device: AVCaptureDevice?
-    @State private var session: AVCaptureSession? = nil
+    @State private var session: AVCaptureSession = AVCaptureSession()
     
-    @State var placeholder: String
+    @ViewBuilder let placeholder: Placeholder
+    
+    let onError: ((Error) -> Void)? = nil
     
     var body : some View {
         ZStack {
-            if(session == nil) {
-                Rectangle()
-                    .fill(.black)
-                Text(placeholder)
+            if session.isRunning {
+                AVCaptureViewRepresentable(session: session)
             }
             else {
-                AVCaptureViewRepresentable(session: session!)
+                placeholder
             }
         }
         .onAppear {
@@ -31,14 +31,15 @@ struct AVCameraView: View {
     }
     
     private func startSession() {
-        if device != nil {
-            session = getCaptureSession(device: device!)
-            session?.startRunning()
+        if session.inputs.isEmpty, let videoDevice = device {
+            tryCaptureVideo(videoDevice)
         }
+        
+        session.startRunning()
     }
     
     private func stopSession() {
-        session?.stopRunning()
+        session.stopRunning()
     }
     
     private func restartSession() {
@@ -46,29 +47,35 @@ struct AVCameraView: View {
         startSession()
     }
     
-    private func getCaptureSession(device: AVCaptureDevice) -> AVCaptureSession? {
+    private func tryCaptureVideo(_ device: AVCaptureDevice) {
         do {
-            let session = AVCaptureSession()
+            // Remove all previous inputs
+            session.inputs.forEach { input in
+                session.removeInput(input)
+            }
+            
             let videoInput = try AVCaptureDeviceInput(device: device)
             
             if session.canAddInput(videoInput) {
+                session.beginConfiguration()
                 session.addInput(videoInput)
-                
-                return session
+                session.commitConfiguration()
             }
         }
         catch {
-            placeholder = error.localizedDescription
+            if let onErrorCallback = onError {
+                onErrorCallback(error)
+            }
+            
+            print("Failed to capture session \(error)")
         }
-        
-        return nil
     }
 }
 
 /**
  * Preview for camera
  */
-struct AVCaptureViewRepresentable: NSViewRepresentable {
+private struct AVCaptureViewRepresentable: NSViewRepresentable {
     typealias NSViewType = AVCaptureVideoNSView
     
     let session: AVCaptureSession
@@ -82,11 +89,11 @@ struct AVCaptureViewRepresentable: NSViewRepresentable {
     }
     
     func updateNSView(_ nsView: NSViewType, context: Context) {
-        
+        nsView.updateSession(session)
     }
 }
 
-final class AVCaptureVideoNSView: NSView {
+private final class AVCaptureVideoNSView: NSView {
     
     init(captureSession: AVCaptureSession) {
         super.init(frame: .zero)
@@ -101,6 +108,12 @@ final class AVCaptureVideoNSView: NSView {
         
         layer = previewLayer
         wantsLayer = true
+    }
+    
+    func updateSession(_ captureSession: AVCaptureSession) {
+        if let previewLayer = layer as? AVCaptureVideoPreviewLayer {
+            previewLayer.session = captureSession
+        }
     }
     
     required init?(coder: NSCoder) {

@@ -5,7 +5,7 @@ import Shared
 
 struct StartView: View {
     
-    @EnvironmentObject var navigator: Navigator
+   // @EnvironmentObject var navigator: Navigator
     
     @State private var hasCameraPermission: Bool = hasCameraPermission()
     @State private var isExtensionInstalled: Bool = isExtensionInstalled()
@@ -73,7 +73,7 @@ struct StartView: View {
     
     private func navigate() {
         if(StartView.hasCameraPermission() && StartView.isExtensionInstalled()) {
-            navigator.navigate(destination: NavigationDestination.main)
+          //  navigator.navigate(destination: NavigationDestination.main)
         }
     }
 }

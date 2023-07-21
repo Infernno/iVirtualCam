@@ -7,6 +7,6 @@ class StartViewModel {
 
 class StartState {
     func test() {
-        MTLCreateSystemDefaultDevice()
+        
     }
 }
