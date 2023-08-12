@@ -14,7 +14,6 @@
 		860C5DB42A3DFD3200A04A32 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5DB32A3DFD3200A04A32 /* StartViewModel.swift */; };
 		86109B612A51ABCC00E2EDA3 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86109B602A51ABCC00E2EDA3 /* Binding.swift */; };
 		865827E42A5C63E700627E52 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865827E32A5C63E700627E52 /* CameraView.swift */; };
-		865827E62A5C650800627E52 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865827E52A5C650800627E52 /* CameraViewModel.swift */; };
 		8668DDDD2A51D8BE007E1311 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668DDDC2A51D8BE007E1311 /* BlurView.swift */; };
 		8669A3AA2A6312BC00AC50A8 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669A3A92A6312BC00AC50A8 /* ImageProcessor.swift */; };
 		867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */; };
@@ -28,11 +27,19 @@
 		867411A82A3A1241006DFCA8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411A72A3A1241006DFCA8 /* main.swift */; };
 		867411AD2A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		867411BD2A3A17AF006DFCA8 /* AVDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411BC2A3A17AF006DFCA8 /* AVDeviceView.swift */; };
+		86747DC02A757F470034F436 /* CameraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86747DBF2A757F470034F436 /* CameraRepository.swift */; };
+		86752A792A6E38D200113F55 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86752A782A6E38D200113F55 /* UserDefaults.swift */; };
+		86752A7B2A6E3B7900113F55 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 86752A7A2A6E3B7900113F55 /* Defaults */; };
+		86752A7D2A6E3B7E00113F55 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 86752A7C2A6E3B7E00113F55 /* Defaults */; };
+		86752A7F2A6E3C3B00113F55 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86752A7E2A6E3C3B00113F55 /* Camera.swift */; };
 		867717A12A6689610068DB9F /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867717A02A6689610068DB9F /* SelectImageView.swift */; };
 		867717A32A669DDA0068DB9F /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; };
 		867717A42A669DDA0068DB9F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86D77D522A76A46600A60FCC /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D77D512A76A46600A60FCC /* NotificationCenter.swift */; };
+		86D77D552A76C5D300A60FCC /* GPUProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D77D542A76C5D300A60FCC /* GPUProcessing.swift */; };
 		86F2A9482A62C1C6007F1406 /* CameraExtensionStreamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F2A9472A62C1C6007F1406 /* CameraExtensionStreamSource.swift */; };
 		86F2A94A2A62C1FB007F1406 /* CameraExtensionProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F2A9492A62C1FB007F1406 /* CameraExtensionProviderSource.swift */; };
+		86F9D7232A6D9997002E6648 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 86F9D7222A6D9997002E6648 /* Defaults */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +124,6 @@
 		86109B602A51ABCC00E2EDA3 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		861FBEEE2A3DB36700170EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		865827E32A5C63E700627E52 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		865827E52A5C650800627E52 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		8668DDDC2A51D8BE007E1311 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		8669A3A92A6312BC00AC50A8 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		867411712A3A120E006DFCA8 /* iVirtualCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVirtualCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +143,12 @@
 		867411A92A3A1241006DFCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		867411AA2A3A1241006DFCA8 /* CameraExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraExtension.entitlements; sourceTree = "<group>"; };
 		867411BC2A3A17AF006DFCA8 /* AVDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVDeviceView.swift; sourceTree = "<group>"; };
+		86747DBF2A757F470034F436 /* CameraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepository.swift; sourceTree = "<group>"; };
+		86752A782A6E38D200113F55 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		86752A7E2A6E3C3B00113F55 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		867717A02A6689610068DB9F /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
+		86D77D512A76A46600A60FCC /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		86D77D542A76C5D300A60FCC /* GPUProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUProcessing.swift; sourceTree = "<group>"; };
 		86F2A9472A62C1C6007F1406 /* CameraExtensionStreamSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionStreamSource.swift; sourceTree = "<group>"; };
 		86F2A9492A62C1FB007F1406 /* CameraExtensionProviderSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionProviderSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86752A7B2A6E3B7900113F55 /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F9D7232A6D9997002E6648 /* Defaults in Frameworks */,
 				860C5DA72A3DC73000A04A32 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86752A7D2A6E3B7E00113F55 /* Defaults in Frameworks */,
 				867717A32A669DDA0068DB9F /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,8 +209,12 @@
 		860C5DA22A3DC73000A04A32 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				86D77D502A76A44F00A60FCC /* Extensions */,
+				86752A7E2A6E3C3B00113F55 /* Camera.swift */,
 				860C5DAD2A3DC74700A04A32 /* Const.swift */,
 				86109B602A51ABCC00E2EDA3 /* Binding.swift */,
+				86752A782A6E38D200113F55 /* UserDefaults.swift */,
+				86D77D542A76C5D300A60FCC /* GPUProcessing.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -205,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				865827E32A5C63E700627E52 /* CameraView.swift */,
-				865827E52A5C650800627E52 /* CameraViewModel.swift */,
+				86747DBF2A757F470034F436 /* CameraRepository.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -239,7 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				8674117A2A3A120F006DFCA8 /* Preview Content */,
-				867411B22A3A158C006DFCA8 /* Screens */,
+				867411B22A3A158C006DFCA8 /* Features */,
 				867411762A3A120E006DFCA8 /* ContentView.swift */,
 				867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */,
 				8674117D2A3A120F006DFCA8 /* iVirtualCam.entitlements */,
@@ -289,14 +307,14 @@
 			path = CameraExtension;
 			sourceTree = "<group>";
 		};
-		867411B22A3A158C006DFCA8 /* Screens */ = {
+		867411B22A3A158C006DFCA8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				865827E22A5C63DE00627E52 /* Camera */,
 				860C5D972A3DB8CF00A04A32 /* Start */,
 				867411B92A3A1782006DFCA8 /* Widgets */,
 			);
-			path = Screens;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		867411B92A3A1782006DFCA8 /* Widgets */ = {
@@ -313,6 +331,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86D77D502A76A44F00A60FCC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86D77D512A76A46600A60FCC /* NotificationCenter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +368,9 @@
 			dependencies = (
 			);
 			name = Shared;
+			packageProductDependencies = (
+				86752A7A2A6E3B7900113F55 /* Defaults */,
+			);
 			productName = Shared;
 			productReference = 860C5DA12A3DC73000A04A32 /* Shared.framework */;
 			productType = "com.apple.product-type.framework";
@@ -363,6 +392,9 @@
 				860C5DA62A3DC73000A04A32 /* PBXTargetDependency */,
 			);
 			name = iVirtualCam;
+			packageProductDependencies = (
+				86F9D7222A6D9997002E6648 /* Defaults */,
+			);
 			productName = iVirtualCam;
 			productReference = 867411712A3A120E006DFCA8 /* iVirtualCam.app */;
 			productType = "com.apple.product-type.application";
@@ -418,6 +450,9 @@
 				867717A62A669DDA0068DB9F /* PBXTargetDependency */,
 			);
 			name = CameraExtension;
+			packageProductDependencies = (
+				86752A7C2A6E3B7E00113F55 /* Defaults */,
+			);
 			productName = CameraExtension;
 			productReference = 867411A32A3A1241006DFCA8 /* com.infernno.iVirtualCam.CameraExtension.systemextension */;
 			productType = "com.apple.product-type.system-extension";
@@ -461,6 +496,9 @@
 				Base,
 			);
 			mainGroup = 867411682A3A120E006DFCA8;
+			packageReferences = (
+				86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = 867411722A3A120E006DFCA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -519,8 +557,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86752A7F2A6E3C3B00113F55 /* Camera.swift in Sources */,
 				860C5DAE2A3DC74700A04A32 /* Const.swift in Sources */,
+				86D77D522A76A46600A60FCC /* NotificationCenter.swift in Sources */,
+				86D77D552A76C5D300A60FCC /* GPUProcessing.swift in Sources */,
 				86109B612A51ABCC00E2EDA3 /* Binding.swift in Sources */,
+				86752A792A6E38D200113F55 /* UserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,13 +570,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86747DC02A757F470034F436 /* CameraRepository.swift in Sources */,
 				860C5DB42A3DFD3200A04A32 /* StartViewModel.swift in Sources */,
 				865827E42A5C63E700627E52 /* CameraView.swift in Sources */,
 				867411772A3A120E006DFCA8 /* ContentView.swift in Sources */,
 				867717A12A6689610068DB9F /* SelectImageView.swift in Sources */,
 				867411BD2A3A17AF006DFCA8 /* AVDeviceView.swift in Sources */,
 				8668DDDD2A51D8BE007E1311 /* BlurView.swift in Sources */,
-				865827E62A5C650800627E52 /* CameraViewModel.swift in Sources */,
 				867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */,
 				860C5D992A3DB8DD00A04A32 /* StartView.swift in Sources */,
 			);
@@ -1046,6 +1088,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = exactVersion;
+				version = 7.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86752A7A2A6E3B7900113F55 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		86752A7C2A6E3B7E00113F55 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		86F9D7222A6D9997002E6648 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 867411692A3A120E006DFCA8 /* Project object */;
 }

@@ -6,6 +6,7 @@ import os.log
 import Shared
 import CoreImage
 import CoreImage.CIFilterBuiltins
+import Defaults
 
 let kFrameRate: Int = 60
 
@@ -105,15 +106,23 @@ class CameraExtensionDeviceSource: NSObject, CMIOExtensionDeviceSource, AVCaptur
         captureSession.beginConfiguration()
         captureSession.addOutput(output)
         
-        let cameraId = "47B4B64B-7067-4B9C-AD2B-AE273A71F4B5"
-        let input = findCaptureDevice(cameraId)
+        let cameraId = Defaults[.inputCameraDeviceId]
         
-        captureSession.addInput(input!)
+        if cameraId != noneDeviceID, let input = findCaptureDevice(cameraId) {
+            captureSession.addInput(input)
+        }
+        else if let input = findCaptureDevice(nil) {
+            captureSession.addInput(input)
+            os_log("[VCAM]: Fallback to first capture device")
+        }
+        else {
+            os_log("[VCAM]: No input available, stored camera id \(cameraId)")
+        }
         
         captureSession.commitConfiguration()
     }
     
-    private func findCaptureDevice(_ id: String) -> AVCaptureDeviceInput? {
+    private func findCaptureDevice(_ id: String?) -> AVCaptureDeviceInput? {
         let discoverySession = AVCaptureDevice.DiscoverySession(
             deviceTypes: [.builtInWideAngleCamera, .externalUnknown, .deskViewCamera],
             mediaType: .video,
@@ -121,9 +130,40 @@ class CameraExtensionDeviceSource: NSObject, CMIOExtensionDeviceSource, AVCaptur
         )
         
         let devices = discoverySession.devices
+        var device: AVCaptureDevice?
         
-        guard let device = devices.first(where: { $0.uniqueID == id }) else { return nil }
+        if id == nil {
+            device = devices.first { $0.localizedName != VirtualCameraDeviceName }
+        }
+        else {
+            device = devices.first(where: { $0.uniqueID == id })
+        }
         
-        return try? AVCaptureDeviceInput(device: device)
+        if device == nil {
+            return nil
+        }
+        
+        return try? AVCaptureDeviceInput(device: device!)
+    }
+    
+    private func updateCaptureDevice(_ id: String) {
+        captureSession.inputs.forEach { input in
+            captureSession.removeInput(input)
+        }
+        
+        guard let capture = findCaptureDevice(id) else {
+            os_log("Failed to find camera with id \(id)")
+            return
+        }
+        
+        captureSession.addInput(capture)
+    }
+    
+    private func observeSettings() {
+        Task {
+            for await uniqID in Defaults.updates(.inputCameraDeviceId) {
+                updateCaptureDevice(uniqID)
+            }
+        }
     }
 }

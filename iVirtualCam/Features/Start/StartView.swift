@@ -5,7 +5,7 @@ import Shared
 
 struct StartView: View {
     
-   // @EnvironmentObject var navigator: Navigator
+    // @EnvironmentObject var navigator: Navigator
     
     @State private var hasCameraPermission: Bool = hasCameraPermission()
     @State private var isExtensionInstalled: Bool = isExtensionInstalled()
@@ -35,6 +35,12 @@ struct StartView: View {
             }
             
             Text(delegate.message)
+            
+            Spacer().frame(height: 30)
+            
+            Button("Uninstall extension") {
+                uninstallSystemExtension()
+            }
         }
     }
     
@@ -65,6 +71,15 @@ struct StartView: View {
         OSSystemExtensionManager.shared.submitRequest(request)
     }
     
+    private func uninstallSystemExtension() {
+        let activationRequest = OSSystemExtensionRequest.deactivationRequest(
+            forExtensionWithIdentifier: CameraExtensionBundleID,
+            queue: .main
+        )
+        activationRequest.delegate = delegate
+        OSSystemExtensionManager.shared.submitRequest(activationRequest)
+    }
+    
     private func requestCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video) { isGranted in
             hasCameraPermission = isGranted
@@ -73,7 +88,7 @@ struct StartView: View {
     
     private func navigate() {
         if(StartView.hasCameraPermission() && StartView.isExtensionInstalled()) {
-          //  navigator.navigate(destination: NavigationDestination.main)
+            //  navigator.navigate(destination: NavigationDestination.main)
         }
     }
 }

@@ -25,15 +25,7 @@ struct ContentView: View {
         NavigationSplitView(
             sidebar: {
                 List(menuItems, selection: $selectedScreen) { item in
-                    HStack(alignment: .center) {
-                        Image(systemName: item.image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                        Text(item.name)
-                            .font(.system(.title3))
-                            .bold()
-                    }
+                    Label(item.name, systemImage: item.image)
                 }
             },
             detail: {
@@ -45,6 +37,7 @@ struct ContentView: View {
                 }
             }
         )
+        .environmentObject(CameraRepository())
     }
 }
 
