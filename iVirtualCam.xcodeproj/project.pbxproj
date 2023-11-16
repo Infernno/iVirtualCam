@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		860C5D992A3DB8DD00A04A32 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5D982A3DB8DD00A04A32 /* StartView.swift */; };
+		860C5D992A3DB8DD00A04A32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5D982A3DB8DD00A04A32 /* SettingsView.swift */; };
 		860C5DA72A3DC73000A04A32 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; };
 		860C5DA82A3DC73000A04A32 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		860C5DAE2A3DC74700A04A32 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5DAD2A3DC74700A04A32 /* Const.swift */; };
-		860C5DB42A3DFD3200A04A32 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5DB32A3DFD3200A04A32 /* StartViewModel.swift */; };
 		86109B612A51ABCC00E2EDA3 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86109B602A51ABCC00E2EDA3 /* Binding.swift */; };
+		86299E172A877AF9002DEFF5 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 86299E162A877AF9002DEFF5 /* SwiftyBeaver */; };
+		86299E192A87A251002DEFF5 /* SectionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86299E182A87A251002DEFF5 /* SectionGroup.swift */; };
+		86299E1C2A891283002DEFF5 /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86299E1B2A891283002DEFF5 /* UnderConstructionView.swift */; };
+		86299E212A891EE9002DEFF5 /* CameraExtensionInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86299E202A891EE9002DEFF5 /* CameraExtensionInstaller.swift */; };
+		86299E232A89261F002DEFF5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86299E222A89261F002DEFF5 /* View.swift */; };
 		865827E42A5C63E700627E52 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865827E32A5C63E700627E52 /* CameraView.swift */; };
 		8668DDDD2A51D8BE007E1311 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668DDDC2A51D8BE007E1311 /* BlurView.swift */; };
 		8669A3AA2A6312BC00AC50A8 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669A3A92A6312BC00AC50A8 /* ImageProcessor.swift */; };
 		867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */; };
-		867411772A3A120E006DFCA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411762A3A120E006DFCA8 /* ContentView.swift */; };
+		867411772A3A120E006DFCA8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411762A3A120E006DFCA8 /* MainView.swift */; };
 		867411792A3A120F006DFCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867411782A3A120F006DFCA8 /* Assets.xcassets */; };
 		8674117C2A3A120F006DFCA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8674117B2A3A120F006DFCA8 /* Preview Assets.xcassets */; };
 		867411872A3A120F006DFCA8 /* iVirtualCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867411862A3A120F006DFCA8 /* iVirtualCamTests.swift */; };
@@ -36,7 +40,6 @@
 		867717A32A669DDA0068DB9F /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; };
 		867717A42A669DDA0068DB9F /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 860C5DA12A3DC73000A04A32 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		86D77D522A76A46600A60FCC /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D77D512A76A46600A60FCC /* NotificationCenter.swift */; };
-		86D77D552A76C5D300A60FCC /* GPUProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D77D542A76C5D300A60FCC /* GPUProcessing.swift */; };
 		86F2A9482A62C1C6007F1406 /* CameraExtensionStreamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F2A9472A62C1C6007F1406 /* CameraExtensionStreamSource.swift */; };
 		86F2A94A2A62C1FB007F1406 /* CameraExtensionProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F2A9492A62C1FB007F1406 /* CameraExtensionProviderSource.swift */; };
 		86F9D7232A6D9997002E6648 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 86F9D7222A6D9997002E6648 /* Defaults */; };
@@ -117,18 +120,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		860C5D982A3DB8DD00A04A32 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		860C5D982A3DB8DD00A04A32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		860C5DA12A3DC73000A04A32 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		860C5DAD2A3DC74700A04A32 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		860C5DB32A3DFD3200A04A32 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		86109B602A51ABCC00E2EDA3 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		861FBEEE2A3DB36700170EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		86299E182A87A251002DEFF5 /* SectionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionGroup.swift; sourceTree = "<group>"; };
+		86299E1B2A891283002DEFF5 /* UnderConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionView.swift; sourceTree = "<group>"; };
+		86299E202A891EE9002DEFF5 /* CameraExtensionInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionInstaller.swift; sourceTree = "<group>"; };
+		86299E222A89261F002DEFF5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		865827E32A5C63E700627E52 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		8668DDDC2A51D8BE007E1311 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		8669A3A92A6312BC00AC50A8 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		867411712A3A120E006DFCA8 /* iVirtualCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVirtualCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVirtualCamApp.swift; sourceTree = "<group>"; };
-		867411762A3A120E006DFCA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		867411762A3A120E006DFCA8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		867411782A3A120F006DFCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8674117B2A3A120F006DFCA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8674117D2A3A120F006DFCA8 /* iVirtualCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iVirtualCam.entitlements; sourceTree = "<group>"; };
@@ -148,7 +154,6 @@
 		86752A7E2A6E3C3B00113F55 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		867717A02A6689610068DB9F /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
 		86D77D512A76A46600A60FCC /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
-		86D77D542A76C5D300A60FCC /* GPUProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUProcessing.swift; sourceTree = "<group>"; };
 		86F2A9472A62C1C6007F1406 /* CameraExtensionStreamSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionStreamSource.swift; sourceTree = "<group>"; };
 		86F2A9492A62C1FB007F1406 /* CameraExtensionProviderSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionProviderSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +173,7 @@
 			files = (
 				86F9D7232A6D9997002E6648 /* Defaults in Frameworks */,
 				860C5DA72A3DC73000A04A32 /* Shared.framework in Frameworks */,
+				86299E172A877AF9002DEFF5 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,26 +203,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		860C5D972A3DB8CF00A04A32 /* Start */ = {
+		860C5D972A3DB8CF00A04A32 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				860C5D982A3DB8DD00A04A32 /* StartView.swift */,
-				860C5DB32A3DFD3200A04A32 /* StartViewModel.swift */,
+				860C5D982A3DB8DD00A04A32 /* SettingsView.swift */,
+				86299E202A891EE9002DEFF5 /* CameraExtensionInstaller.swift */,
 			);
-			path = Start;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		860C5DA22A3DC73000A04A32 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				86299E142A8777A1002DEFF5 /* Models */,
 				86D77D502A76A44F00A60FCC /* Extensions */,
-				86752A7E2A6E3C3B00113F55 /* Camera.swift */,
 				860C5DAD2A3DC74700A04A32 /* Const.swift */,
-				86109B602A51ABCC00E2EDA3 /* Binding.swift */,
 				86752A782A6E38D200113F55 /* UserDefaults.swift */,
-				86D77D542A76C5D300A60FCC /* GPUProcessing.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		86299E142A8777A1002DEFF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86752A7E2A6E3C3B00113F55 /* Camera.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86299E1A2A89120E002DEFF5 /* UnderConstruction */ = {
+			isa = PBXGroup;
+			children = (
+				86299E1B2A891283002DEFF5 /* UnderConstructionView.swift */,
+			);
+			path = UnderConstruction;
 			sourceTree = "<group>";
 		};
 		865827E22A5C63DE00627E52 /* Camera */ = {
@@ -258,7 +278,7 @@
 			children = (
 				8674117A2A3A120F006DFCA8 /* Preview Content */,
 				867411B22A3A158C006DFCA8 /* Features */,
-				867411762A3A120E006DFCA8 /* ContentView.swift */,
+				867411762A3A120E006DFCA8 /* MainView.swift */,
 				867411742A3A120E006DFCA8 /* iVirtualCamApp.swift */,
 				8674117D2A3A120F006DFCA8 /* iVirtualCam.entitlements */,
 				861FBEEE2A3DB36700170EE3 /* Info.plist */,
@@ -310,8 +330,9 @@
 		867411B22A3A158C006DFCA8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				86299E1A2A89120E002DEFF5 /* UnderConstruction */,
 				865827E22A5C63DE00627E52 /* Camera */,
-				860C5D972A3DB8CF00A04A32 /* Start */,
+				860C5D972A3DB8CF00A04A32 /* Settings */,
 				867411B92A3A1782006DFCA8 /* Widgets */,
 			);
 			path = Features;
@@ -322,6 +343,7 @@
 			children = (
 				867411BC2A3A17AF006DFCA8 /* AVDeviceView.swift */,
 				8668DDDC2A51D8BE007E1311 /* BlurView.swift */,
+				86299E182A87A251002DEFF5 /* SectionGroup.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -336,7 +358,9 @@
 		86D77D502A76A44F00A60FCC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				86109B602A51ABCC00E2EDA3 /* Binding.swift */,
 				86D77D512A76A46600A60FCC /* NotificationCenter.swift */,
+				86299E222A89261F002DEFF5 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +418,7 @@
 			name = iVirtualCam;
 			packageProductDependencies = (
 				86F9D7222A6D9997002E6648 /* Defaults */,
+				86299E162A877AF9002DEFF5 /* SwiftyBeaver */,
 			);
 			productName = iVirtualCam;
 			productReference = 867411712A3A120E006DFCA8 /* iVirtualCam.app */;
@@ -498,6 +523,7 @@
 			mainGroup = 867411682A3A120E006DFCA8;
 			packageReferences = (
 				86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */,
+				86299E152A877AF9002DEFF5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = 867411722A3A120E006DFCA8 /* Products */;
 			projectDirPath = "";
@@ -559,8 +585,8 @@
 			files = (
 				86752A7F2A6E3C3B00113F55 /* Camera.swift in Sources */,
 				860C5DAE2A3DC74700A04A32 /* Const.swift in Sources */,
+				86299E232A89261F002DEFF5 /* View.swift in Sources */,
 				86D77D522A76A46600A60FCC /* NotificationCenter.swift in Sources */,
-				86D77D552A76C5D300A60FCC /* GPUProcessing.swift in Sources */,
 				86109B612A51ABCC00E2EDA3 /* Binding.swift in Sources */,
 				86752A792A6E38D200113F55 /* UserDefaults.swift in Sources */,
 			);
@@ -571,14 +597,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				86747DC02A757F470034F436 /* CameraRepository.swift in Sources */,
-				860C5DB42A3DFD3200A04A32 /* StartViewModel.swift in Sources */,
 				865827E42A5C63E700627E52 /* CameraView.swift in Sources */,
-				867411772A3A120E006DFCA8 /* ContentView.swift in Sources */,
+				867411772A3A120E006DFCA8 /* MainView.swift in Sources */,
 				867717A12A6689610068DB9F /* SelectImageView.swift in Sources */,
+				86299E192A87A251002DEFF5 /* SectionGroup.swift in Sources */,
 				867411BD2A3A17AF006DFCA8 /* AVDeviceView.swift in Sources */,
 				8668DDDD2A51D8BE007E1311 /* BlurView.swift in Sources */,
 				867411752A3A120E006DFCA8 /* iVirtualCamApp.swift in Sources */,
-				860C5D992A3DB8DD00A04A32 /* StartView.swift in Sources */,
+				86299E1C2A891283002DEFF5 /* UnderConstructionView.swift in Sources */,
+				860C5D992A3DB8DD00A04A32 /* SettingsView.swift in Sources */,
+				86299E212A891EE9002DEFF5 /* CameraExtensionInstaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1118,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		86299E152A877AF9002DEFF5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.0;
+			};
+		};
 		86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Defaults";
@@ -1101,6 +1137,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		86299E162A877AF9002DEFF5 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86299E152A877AF9002DEFF5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
 		86752A7A2A6E3B7900113F55 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 86F9D7212A6D9997002E6648 /* XCRemoteSwiftPackageReference "Defaults" */;

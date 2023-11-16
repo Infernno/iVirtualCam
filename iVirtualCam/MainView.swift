@@ -19,7 +19,7 @@ private let menuItems = [
 
 struct ContentView: View {
     
-    @State private var selectedScreen: MenuId = .camera
+    @State private var selectedScreen: MenuId = .settings
     
     var body: some View {
         NavigationSplitView(
@@ -27,13 +27,16 @@ struct ContentView: View {
                 List(menuItems, selection: $selectedScreen) { item in
                     Label(item.name, systemImage: item.image)
                 }
+                .toolbar(.hidden, for: .windowToolbar)
             },
             detail: {
                 switch(selectedScreen) {
                 case .camera:
                     CameraView()
                 case .settings:
-                    StartView()
+                    SettingsView()
+                default:
+                    UnderConstructionView()
                 }
             }
         )

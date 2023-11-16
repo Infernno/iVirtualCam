@@ -35,7 +35,7 @@ class CameraExtensionDeviceSource: NSObject, CMIOExtensionDeviceSource, AVCaptur
         let videoStreamFormat = CMIOExtensionStreamFormat.init(formatDescription: _videoDescription, maxFrameDuration: CMTime(value: 1, timescale: Int32(kFrameRate)), minFrameDuration: CMTime(value: 1, timescale: Int32(kFrameRate)), validFrameDurations: nil)
         
         let videoID = UUID() // replace this with your video UUID
-        _streamSource = CameraExtensionStreamSource(localizedName: "SampleCapture.Video", streamID: videoID, streamFormat: videoStreamFormat, device: device)
+        _streamSource = CameraExtensionStreamSource(localizedName: VirtualCameraStreamName, streamID: videoID, streamFormat: videoStreamFormat, device: device)
         
         do {
             try device.addStream(_streamSource.stream)
@@ -54,7 +54,7 @@ class CameraExtensionDeviceSource: NSObject, CMIOExtensionDeviceSource, AVCaptur
         }
         
         if properties.contains(.deviceModel) {
-            deviceProperties.model = "SampleCapture Model"
+            deviceProperties.model = VirtualCameraDeviceName
         }
         
         return deviceProperties

@@ -8,8 +8,6 @@ struct AVDeviceView<Placeholder: View>: View {
     
     @ViewBuilder let placeholder: Placeholder
     
-    let onError: ((Error) -> Void)? = nil
-    
     var body : some View {
         ZStack {
             if session.isRunning {
@@ -30,46 +28,134 @@ struct AVDeviceView<Placeholder: View>: View {
         }
     }
     
-    private func startSession() {
-        if session.inputs.isEmpty, let videoDevice = device {
-            tryCaptureVideo(videoDevice)
+    private func restartSession() {
+        DispatchQueue.global().async { [weak session, weak device] in
+            print("restartSession()")
+            
+            guard let session = session else {
+                return
+            }
+            
+            guard let device = device else {
+                return
+            }
+            
+            session.stopRunning()
+            setupCamera(device, session)
+            session.startRunning()
         }
-        
-        session.startRunning()
+    }
+    
+    private func startSession() {
+        DispatchQueue.global().async { [weak session, weak device] in
+            print("startSession()")
+            
+            guard let session = session else {
+                return
+            }
+            
+            if session.inputs.isEmpty {
+                guard let device = device else {
+                    return
+                }
+                
+                setupCamera(device, session)
+            }
+            
+            session.startRunning()
+        }
     }
     
     private func stopSession() {
-        session.stopRunning()
+        DispatchQueue.global().async { [weak session] in
+            print("stopSession()")
+            session?.stopRunning()
+        }
     }
     
-    private func restartSession() {
-        stopSession()
-        startSession()
-    }
-    
-    private func tryCaptureVideo(_ device: AVCaptureDevice) {
+    private func setupCamera(_ camera: AVCaptureDevice, _ session: AVCaptureSession) {
+        session.beginConfiguration()
+        
         do {
             // Remove all previous inputs
             session.inputs.forEach { input in
                 session.removeInput(input)
             }
             
-            let videoInput = try AVCaptureDeviceInput(device: device)
+            let videoInput = try AVCaptureDeviceInput(device: camera)
             
             if session.canAddInput(videoInput) {
-                session.beginConfiguration()
                 session.addInput(videoInput)
-                session.commitConfiguration()
             }
         }
         catch {
-            if let onErrorCallback = onError {
-                onErrorCallback(error)
-            }
+            // if let onErrorCallback = onError {
+            //    onErrorCallback(error)
+            // }
             
             print("Failed to capture session \(error)")
         }
+        
+        session.commitConfiguration()
     }
+    
+    /*
+     private func startSession() {
+     let isEmpty = session.inputs.isEmpty
+     
+     if isEmpty, let videoDevice = device {
+     tryCaptureVideo(videoDevice)
+     }
+     
+     DispatchQueue.global().async { [weak session] in
+     session?.startRunning()
+     }
+     
+     // session.startRunning()
+     }
+     
+     private func stopSession() {
+     DispatchQueue.global().async { [weak session] in
+     session?.stopRunning()
+     }
+     //session.stopRunning()
+     }
+     
+     private func restartSession() {
+     // Remove all previous inputs
+     session.inputs.forEach { input in
+     session.removeInput(input)
+     }
+     
+     stopSession()
+     startSession()
+     }
+     
+     private func tryCaptureVideo(_ device: AVCaptureDevice) {
+     session.beginConfiguration()
+     
+     do {
+     // Remove all previous inputs
+     session.inputs.forEach { input in
+     session.removeInput(input)
+     }
+     
+     let videoInput = try AVCaptureDeviceInput(device: device)
+     
+     if session.canAddInput(videoInput) {
+     session.addInput(videoInput)
+     }
+     }
+     catch {
+     // if let onErrorCallback = onError {
+     //    onErrorCallback(error)
+     // }
+     
+     print("Failed to capture session \(error)")
+     }
+     
+     session.commitConfiguration()
+     } */
 }
 
 /**

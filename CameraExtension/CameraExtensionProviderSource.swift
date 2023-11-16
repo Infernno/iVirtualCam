@@ -1,6 +1,6 @@
 import Foundation
 import CoreMediaIO
-import os.log
+import Shared
 
 class CameraExtensionProviderSource: NSObject, CMIOExtensionProviderSource {
     
@@ -15,7 +15,7 @@ class CameraExtensionProviderSource: NSObject, CMIOExtensionProviderSource {
         super.init()
         
         provider = CMIOExtensionProvider(source: self, clientQueue: clientQueue)
-        deviceSource = CameraExtensionDeviceSource(localizedName: "iVirtualCam")
+        deviceSource = CameraExtensionDeviceSource(localizedName: VirtualCameraDeviceName)
         
         do {
             try provider.addDevice(deviceSource.device)
@@ -25,17 +25,14 @@ class CameraExtensionProviderSource: NSObject, CMIOExtensionProviderSource {
     }
     
     func connect(to client: CMIOExtensionClient) throws {
-        
         // Handle client connect
     }
     
     func disconnect(from client: CMIOExtensionClient) {
-        
         // Handle client disconnect
     }
     
     var availableProperties: Set<CMIOExtensionProperty> {
-        
         // See full list of CMIOExtensionProperty choices in CMIOExtensionProperties.h
         return [.providerManufacturer]
     }
@@ -44,13 +41,12 @@ class CameraExtensionProviderSource: NSObject, CMIOExtensionProviderSource {
         
         let providerProperties = CMIOExtensionProviderProperties(dictionary: [:])
         if properties.contains(.providerManufacturer) {
-            providerProperties.manufacturer = "SampleCapture Manufacturer"
+            providerProperties.manufacturer = VirtualCameraManufacturer
         }
         return providerProperties
     }
     
     func setProviderProperties(_ providerProperties: CMIOExtensionProviderProperties) throws {
-        
         // Handle settable properties here.
     }
 }

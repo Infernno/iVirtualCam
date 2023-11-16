@@ -9,15 +9,15 @@ struct CameraView: View {
     
     @Default(.inputCameraDeviceId) var selectedCameraId: String
     
-    @State var inputCameras: [Camera] = []
+    @State var inputCameras: [AVCaptureDevice] = []
     @State var virtualCamera: AVCaptureDevice? = nil
     
     var body: some View {
         VStack {
             Picker("Select input camera", selection: $selectedCameraId) {
-                ForEach(inputCameras) { camera in
-                    Text(camera.name)
-                        .tag(camera.id)
+                ForEach(inputCameras, id: \.uniqueID) { camera in
+                    Text(camera.localizedName)
+                        .tag(camera.uniqueID)
                 }
             }.frame(width: 400)
             
@@ -25,15 +25,17 @@ struct CameraView: View {
             
             Text("Virtual camera").font(.title3)
             
-            AVDeviceView(
-                device: $virtualCamera,
-                placeholder:  {
-                    ZStack {
-                        Rectangle().fill(.black)
-                        Text("Ops, virtual camera is not available :(")
+            ZStack {
+                AVDeviceView(
+                    device: $virtualCamera,
+                    placeholder:  {
+                        ZStack {
+                            Rectangle().fill(.black)
+                            Text("Ops, virtual camera is not available :(")
+                        }
                     }
-                }
-            )
+                )
+            }.cornerRadius(20)
         }
         .padding()
         .onAppear(perform: refreshCameras)
